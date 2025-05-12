@@ -137,77 +137,32 @@
 </head>
 <body>
     <div class="container">
-        <img src="assets/icon.png" alt="Sudoku Horizon App Icon" class="app-icon">
+        <img src="../assets/icon.png" alt="Sudoku Horizon App Icon" class="app-icon">
         
         <div class="logo">
             <h1>SUDOKU HORIZON</h1>
             <div class="line"></div>
         </div>
         
-        <p class="tagline">L'expérience Sudoku ultime</p>
+        <p class="tagline">The ultimate Sudoku experience</p>
         
         <div class="features">
-            ✓ Sudoku Classique et Jigsaw<br>
-            ✓ Interface élégante et intuitive<br>
-            ✓ 100% concentration
+            ✓ Classic and Jigsaw Sudoku<br>
+            ✓ Elegant and intuitive interface<br>
+            ✓ 100% focus
         </div>
         
         <div class="app-store-badge">
             <a href="https://apps.apple.com/app/id6745453318" target="_blank">
-                <img src="assets/Download-on-the-App-Store/FR/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_FR_RGB_blk_100517.svg" 
-                     alt="Télécharger dans l'App Store">
+                <img src="../assets/Download-on-the-App-Store/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US_RGB_blk_100517.svg" 
+                     alt="Download on the App Store">
             </a>
         </div>
         
         <div class="footer">
             <p>&copy; 2025 Sudoku Horizon</p>
-            <p><a href="/privacy-policy">Politique de Confidentialité</a></p>
+            <p><a href="/privacy-policy">Privacy Policy</a></p>
         </div>
     </div>
-    <script>
-        // Détection automatique de la langue
-        const languages = {
-            fr: {
-                tagline: 'L\'expérience Sudoku ultime',
-                features: '✓ Sudoku Classique et Jigsaw<br>✓ Interface élégante et intuitive<br>✓ 100% concentration',
-                badgePath: 'assets/Download-on-the-App-Store/FR/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_FR_RGB_blk_100517.svg',
-                badgeAlt: 'Télécharger dans l\'App Store',
-                privacy: 'Politique de Confidentialité'
-            },
-            en: {
-                tagline: 'The ultimate Sudoku experience',
-                features: '✓ Classic and Jigsaw Sudoku<br>✓ Elegant and intuitive interface<br>✓ 100% focus',
-                badgePath: 'assets/Download-on-the-App-Store/US/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_US_RGB_blk_100517.svg',
-                badgeAlt: 'Download on the App Store',
-                privacy: 'Privacy Policy'
-            },
-            es: {
-                tagline: 'La experiencia definitiva de Sudoku',
-                features: '✓ Sudoku Clásico y Jigsaw<br>✓ Interfaz elegante e intuitiva<br>✓ 100% concentración',
-                badgePath: 'assets/Download-on-the-App-Store/ES/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_ES_RGB_blk_100517.svg',
-                badgeAlt: 'Descargar en el App Store',
-                privacy: 'Política de Privacidad'
-            }
-        };
-
-        document.addEventListener('DOMContentLoaded', function() {
-            // Détection de la langue du navigateur
-            let userLang = navigator.language || navigator.userLanguage;
-            userLang = userLang.substring(0, 2); // Garde seulement les 2 premiers caractères (ex: 'fr-FR' -> 'fr')
-            
-            // Fallback sur l'anglais si la langue n'est pas supportée
-            const selectedLang = languages[userLang] || languages.en;
-            
-            // Mise à jour du contenu
-            document.querySelector('.tagline').innerHTML = selectedLang.tagline;
-            document.querySelector('.features').innerHTML = selectedLang.features;
-            document.querySelector('.app-store-badge img').src = selectedLang.badgePath;
-            document.querySelector('.app-store-badge img').alt = selectedLang.badgeAlt;
-            document.querySelector('.footer a').textContent = selectedLang.privacy;
-            
-            // Mise à jour de l'attribut lang du document
-            document.documentElement.lang = userLang in languages ? userLang : 'en';
-        });
-    </script>
 </body>
 </html>
